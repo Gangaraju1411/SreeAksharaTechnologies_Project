@@ -1,0 +1,13 @@
+package com.akshara;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class AksharaProjectApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(AksharaProjectApplication.class, args);
+	}
+
+}

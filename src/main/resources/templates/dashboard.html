@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .page {
+gap: 20px;
+display: grid;
+            padding: 30px;
+            margin: 1cm auto;
+            border: 2px black solid;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .row1 {
+            border: 2px black solid;
+            padding: 2%;
+            display: flex;
+            gap: 35px;
+        }
+
+        .col11 {
+            width: 38%;
+            border: 2px black solid;
+        }
+
+        .col12 {
+            width: 58%;
+            border: 2px black solid;
+        }
+
+        .row2 {
+            border: 2px black solid;
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            gap: 10px;
+        }
+        .col21{
+            width: 27%;
+            display: flex;
+            border: 2px black solid;
+            padding: 10px;
+            gap: 10px;
+        }
+        .col22{
+            width: 27%;
+            display: flex;
+            border: 2px black solid;
+            padding: 10px;
+            gap: 10px;
+        }
+        .col23{
+            width: 27%;
+            display: flex;
+            border: 2px black solid;
+            padding: 10px;
+            gap: 10px;
+        }
+        .inner21{
+            border: 2px black solid;
+            width: 58%;
+        }
+        .inner22{
+            border: 2px black solid;
+            width: 38%;
+        }
+        .row3 {
+            border: 2px black solid;
+            padding: 2%;
+            display: flex;
+            gap: 35px;
+        }
+
+        .col31 {
+            width: 58%;
+            border: 2px black solid;
+        }
+
+        .col32 {
+            width: 38%;
+            border: 2px black solid;
+            
+        }
+        
+        
+.btn-container {
+	text-align: center;
+}
+
+.btn-container button {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	background-color: #007bff;
+	color: #fff;
+	cursor: pointer;
+}
+        
+        
+        
+        
+        
+        
+        
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="btn-container" style="display: flex; align-items: center; justify-content: end;">
+           <a href="logout">
+					<button type="submit">Logout</button>
+				</a>
+        </div>
+        <div class="row1">
+            <div class="col11">
+                <p style="color: blue;">
+                 What does Akshara Software do?
+Akshara ERP is a cloud-based multi-industry ERP solution. The application 
+has built-in modules for sales management, quality control, finance & accounting, 
+purchase management, customer relationship management, manufacturing & production management,
+ warehouse & inventory management, HR management and MIS generation.
+  The solution caters to manufacturing, construction and the oil 
+& gas sectors and claims to have over 300 clients as of June 2017</p>
+            </div>
+            <div class="col12">
+                
+                     <img src="images/image3.jpg" style="height:165px; width: 705px;">
+               
+            </div>
+        </div>
+        <div class="row2">
+            <div class="col21">
+                <div class="inner21">
+                   <p style="color: red;">
+                   A Application Developer translates client requirements into application features
+                    and ensures the timely delivery of fully functional software applications. 
+                                
+                   </p>
+                </div>
+                <div class="inner22">
+                     <img src="images/image1.jpg" style="height:260px; width: 130px"; object-fit="cover">
+                    
+                </div>
+            </div>
+            <div class="col22">
+                <div class="inner21">
+                    <p style="color: brown;">
+                    
+                    Software testing is the process of evaluating and verifying that a software product or application does what it is supposed to do. 
+                    The benefits of testing include preventing bugs, 
+                    reducing development costs and improving performance.
+                    </p>
+                </div>
+                <div class="inner22">
+                  <img src="images/image4.jpg" style="height:260px; width: 130px"; object-fit="cover">
+                    
+                </div>
+            </div>
+            <div class="col23">
+                <div class="inner21">
+                    <p style="color: green;">
+                    A typical software development team structure includes a business analyst, a product owner,
+                     a project manager, a product designer, a software architect, software developers, 
+                     software testing engineers,
+                     including test automation engineers, as well as a DevOps engineer.
+                    
+                    </p>
+                </div>
+                <div class="inner22">
+                  <img src="images/image2.jpg" style="height:260px; width: 130px"; object-fit="cover">
+                   
+                </div>
+            </div>
+        </div>
+        <div class="row3">
+            <div class="col31">
+                <p>
+                    Sreeakshara Technologies Software Company
+                </p>
+                Address : Narasannapeta
+                <p>
+                Email :aksharainfo@gmail.com
+                </p>
+                <p>
+                Dial : 040-8896258
+                </p>
+                <p>
+                    Head Paragraph
+                </p>
+            </div>
+            <div class="col32">
+            
+            <a href="https://maps.google.com" target="_blank">
+    <img src="images/map.jpg"  style="width: 450px; height: 220px;"/> 
+ 			 </a>
+                  <!-- <a alt="map" href="https://www.google.com/search?q=google+map&rlz=1C1ONGR_enIN1056IN1056&sxsrf=AB5stBhW81y9e26jucYjjLUMrdOiQBuiWQ:1689171914153&tbm=isch&source=iu&ictx=1&vet=1&fir=Q4Sc2NN8wXzMXM%252CZUxnCiLVw2Hi8M%252C%252Fm%252F055t58%253BeGajKPSCeZFXXM%252CXQWW-0Xdf4fwpM%252C_%253BobWHUeq9X0OSGM%252C2XUSPJ9yStAf6M%252C_%253BJyj4NQK_6wA3oM%252CixzWHnYdKdMDzM%252C_%253B10piTn96UUSaOM%252CLxE4584QUoCKZM%252C_&usg=AI4_-kQU_noj0uzYNjp7vnDoKs1UpZYCsA&sa=X&ved=2ahUKEwiQhqHfr4mAAxVlbmwGHa8JBggQ_B16BAhaEAE#imgrc=Q4Sc2NN8wXzMXM">
+                    <img  src="map.jpg"  style="height: 100px;
+                    width: 200px;"/>
+                     
+                 </a> -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

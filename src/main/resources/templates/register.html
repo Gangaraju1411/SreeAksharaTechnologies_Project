@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+
+
+<head>
+<title>Registration Page</title>
+<style>
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f1f1f1;
+}
+
+.container {
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #ffffff;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+	text-align: center;
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+.form-group input {
+	width: 100%;
+	padding: 8px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+}
+
+.btn-container {
+	text-align: center;
+}
+
+.btn-container button {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	background-color: #007bff;
+	color: #fff;
+	cursor: pointer;
+}
+.btn-container button.login-btn {
+	background-color: #4caf50;
+	margin-left: 10px;
+}
+
+</style>
+<script>
+	function validateForm() {
+		var name = document.getElementById("name").value;
+		var mobileNumber = document.getElementById("mobileNumber").value;
+		var username = document.getElementById("username").value;
+		var password = document.getElementById("password").value;
+
+		if (name === "") {
+			alert("Please enter your name.");
+			return false;
+		}
+
+		if (mobileNumber === "") {
+			alert("Please enter your mobile number.");
+			return false;
+		}
+
+		if (!/^\d{10}$/.test(mobile)) {
+			alert("Please enter a valid 10-digit mobile number.");
+			return false;
+		}
+
+		if (username === "") {
+			alert("Please enter a username.");
+			return false;
+		}
+
+		if (password === "") {
+			alert("Please enter a password.");
+			return false;
+		}
+
+		if (password.length < 8) {
+			alert("Password should contain at least 8 characters.");
+			return false;
+		}
+
+		return true;
+	}
+</script>
+</head>
+<body>
+	<div class="container">
+		<h2>Registration</h2>
+		<p th:text="${msg}" style="color: green;" />
+		<p th:text="${errMsg}" style="color: red;" />
+
+
+		<form onsubmit="return validateForm()" , th:action="@{/saveuser}"
+			th:object="${registerDetails}" method="POST">
+			<div class="form-group">
+				<label for="name">Name</label> <input type="text" id="name"
+					name="name" required>
+			</div>
+			<div class="form-group">
+				<label for="mobile">Mobile Number</label> <input type="text"
+					id="mobile" name="mobileNumber" required>
+			</div>
+			<div class="form-group">
+				<label for="username">Username</label> <input type="text"
+					id="username" name="username" required>
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label> <input type="password"
+					id="password" name="password" required>
+			</div>
+			<div class="btn-container">
+				<a href="saveuser">
+					<button type="submit">Register</button>
+				</a> <a href="/">
+					<button type="button" class="login-btn">Login</button>
+				</a>		</div>
+		</form>
+	</div>
+</body>
+</html>
